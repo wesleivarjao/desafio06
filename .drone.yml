@@ -9,6 +9,8 @@ steps:
     - pip install -r requirements.txt
     - pip install pytest
     - pytest health.py -s
+  when:
+    branch: master
 
 
 
