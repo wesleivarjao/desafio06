@@ -4,13 +4,20 @@ name: test-health
 
 steps:
 - name: test
-  image: python:3
+  image: python:3.8.5
   commands:
     - pip install -r requirements.txt
     - pip install pytest
     - pytest health.py -s
-  when:
-    branch: master
+    when:
+      branch: master
 
-
-
+- name: build
+  image: plugins/docker
+  settings:
+    repo: weschap/desafiopython2
+    tags: [ "${DRONE_COMMIT_SHA:0:7}","latest" ]
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
