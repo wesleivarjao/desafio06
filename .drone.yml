@@ -4,7 +4,7 @@ name: test-health
 
 steps:
 - name: test
-  image: python:3.8.5
+  image: python:3
   commands:
     - pip install -r requirements.txt
     - pip install pytest
