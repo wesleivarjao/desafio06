@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: desafiopython06 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: desafiopython06 
+    spec:
+      containers:
+        - name: desafiopython06 
+          image: weschap.azurecr.io/desafiopython06
+          ports:
+          - containerPort: 5000
