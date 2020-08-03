@@ -27,11 +27,9 @@ stages:
 
 - stage: Test
   displayName: Test
-  
   jobs:  
   - job: Test
     displayName: Test
-    
     steps:
     - task: UsePythonVersion@0
       inputs:
