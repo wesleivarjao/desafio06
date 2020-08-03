@@ -11,10 +11,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 redis_url = os.getenv('REDISTOGO_URL')
 
-#rota teste hello world
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
 
 #funcao de teste do sql
 def status_db():
@@ -45,7 +41,7 @@ def status_fila():
 @app.route('/api')
 def status():
     dict_api = {
-        'api': 1.0, 
+        'api': 1.5, 
         'dep': { 
         'db-sql': status_db(),
         'no-sql': nosql,
