@@ -25,8 +25,8 @@ variables:
 
 stages:
 
--stage: Test
- displayName: Test  
+- stage: Test
+  displayName: Test  
 
 - task: UsePythonVersion@0
   inputs:
