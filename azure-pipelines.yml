@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '0f13cfcb-9654-4c49-ac69-9a1b412cb2e7'
-  imageRepository: 'desafiopython06'
+  imageRepository: 'desafiopython'
   containerRegistry: 'weschap.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
