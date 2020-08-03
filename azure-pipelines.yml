@@ -24,6 +24,7 @@ variables:
   
 
 stages:
+
 -stage: Test
  displayName: Test  
 
