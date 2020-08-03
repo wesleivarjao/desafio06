@@ -17,14 +17,34 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'weschap1867a624-auth'
+  python.version: '3.7'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
   
 
 stages:
+-stage: Test
+ displayName: Test  
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(python.version)'
+  displayName: 'Use Python $(python.version)'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    pip install pytest pytest-azurepipelines
+    pytest
+  displayName: 'pytest'
+  
 - stage: Build
   displayName: Build stage
+  dependsOn: Test
   jobs:  
   - job: Build
     displayName: Build
