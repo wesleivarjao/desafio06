@@ -24,27 +24,6 @@ variables:
   
 
 stages:
-- stage: Test
-  displayName: Test
-  jobs:  
-  - job: Test
-    displayName: Test
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - task: UsePythonVersion@0
-      inputs:
-      versionSpec: '$(python.version)'
-      displayName: 'Use Python $(python.version)'
-
-    - script: |
-      python -m pip install --upgrade pip
-      pip install -r requirements.txt
-
-    - script: |
-      pip install pytest pytest-azurepipelines
-      pytest
-  
 - stage: Build
   displayName: Build stage
   dependsOn: Test
