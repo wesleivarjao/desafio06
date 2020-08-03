@@ -4,6 +4,9 @@ metadata:
   name: wesleivarjaodesafio 
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: wesleivarjaodesafio
   template:
     metadata:
       labels:
