@@ -37,7 +37,7 @@ def status_fila():
     return status
 
 #rota teste hello world
-@myapp.route('/')
+@app.route('/')
 def hello_world():
     return 'Hello World'
 
