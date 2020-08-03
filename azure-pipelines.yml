@@ -29,6 +29,8 @@ stages:
   jobs:  
   - job: Test
     displayName: Test
+    pool:
+      vmImage: $(vmImageName)
     steps:
     - task: UsePythonVersion@0
       inputs:
