@@ -93,7 +93,7 @@ stages:
         versionSpec: '3.7'
       
     - script: pip install -r requests
-      displayName: 'Install requests'   
+      displayName: Install requests   
    
    - task: PythonScript@0
      inputs:
@@ -107,4 +107,4 @@ stages:
          else:
          print('Rollback sendo efetuado')
          sys.exit(4)
-       displayName: 'Test Python'
+       displayName: Test Python
