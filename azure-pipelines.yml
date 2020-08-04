@@ -78,4 +78,17 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
+                
+ - stage: Test
+   displayname: Test stage 
+    pool:
+      vmImage: $(vmImageName)
+   steps:
+   - task: dazfuller.pyunittest-task.pyunittest-task.Python Unit Test@0
+     displayName: 'Python unit test'
+     inputs:
+       pythonroot: '$(Pipeline.Workspace)/app/health.py'
+       reqfile: '$(Pipeline.Workspace)/requirements.txt'
+       testfilepattern: test.py
+                
 
