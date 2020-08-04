@@ -92,7 +92,7 @@ stages:
       inputs:
         versionSpec: '3.7'
       
-    - script: pip install -r requests
+    - script: pip install requests
       displayName: Install requests   
     
     - task: PythonScript@0
