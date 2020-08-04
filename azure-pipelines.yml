@@ -81,7 +81,7 @@ stages:
                 
 - stage: Test
   displayName: Test Stage
-  DependsOn: Build
+  DependsOn: Deploy
   
   jobs: 
   - job: Test
@@ -91,6 +91,9 @@ stages:
     - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.7'
+      
+    - script: pip install -r requests
+      displayName: 'Install requests'   
    
    -task: PythonScript@0
     inputs:
