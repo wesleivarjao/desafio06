@@ -81,13 +81,13 @@ stages:
                 
 - stage: Test
   displayName: Test Stage
-  DependsOn: Deploy
+  dependsOn: Deploy
   
   jobs: 
   - job: Test
     pool:
       vmImage: $(vmImageName)
-    step:
+    steps:
     - task: UsePythonVersion@0
       inputs:
         versionSpec: '3.7'
