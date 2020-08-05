@@ -108,4 +108,10 @@ stages:
             print('Rollback sendo efetuado')
             sys.exit(1)
         displayName: Test Python
- 
+      - task:  
+        dependsOn: PythonScript@0
+        condition: failed()
+        environment: 'wesleivarjaodesafio06-9277.desafiopython'
+        inputs:
+          command: rollout
+          arguments: undo 
