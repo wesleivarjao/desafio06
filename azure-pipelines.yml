@@ -106,7 +106,13 @@ stages:
             print('OK - O retorno foi apresentado corretamente')
           else:
             print('Rollback sendo efetuado')
-            sys.exit(4)
+            sys.exit(1)
         displayName: Test Python
-        
- 
+  - job: Rollback
+      dependsOn: Test
+      condition: failed()
+      environment: 'wesleivarjaodesafio06-9277.desafiopython'
+      inputs:
+        command: rollout
+        arguments: undo 
+     
