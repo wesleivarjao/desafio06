@@ -41,11 +41,7 @@ def status_fila():
 @app.route('/api')
 def status():
     dict_api = {
-<<<<<<< HEAD
-        'api': 1.5, 
-=======
-        'api': 1.2, 
->>>>>>> 66beb4fd5b4181325fa75ba01f6dbc493fc33b68
+        'api': 1.3, 
         'dep': { 
         'db-sql': status_db(),
         'no-sql': nosql,
