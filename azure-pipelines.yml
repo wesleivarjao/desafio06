@@ -96,6 +96,7 @@ stages:
       displayName: Install requests   
     
     - task: PythonScript@0
+      condition: always()
       inputs:
         scriptSource: inline
         script: |
