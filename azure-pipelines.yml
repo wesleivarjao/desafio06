@@ -106,5 +106,5 @@ stages:
             print('OK - O retorno foi apresentado corretamente')
           else:
             print('Rollback sendo efetuado')
-            sys.exit(5)
+            sys.exit(4)
         displayName: Test Python
