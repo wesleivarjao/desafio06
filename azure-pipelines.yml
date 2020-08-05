@@ -108,3 +108,5 @@ stages:
             print('Rollback sendo efetuado')
             sys.exit(4)
         displayName: Test Python
+        
+ 
