@@ -1,9 +1,12 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: weschapdesafio06 
+  name: weschapdesafio06-app
 spec:
   replicas: 1
+  selector:
+    matchLabels: 
+      app: weschapdesafio06 
   template:
     metadata:
       labels:
