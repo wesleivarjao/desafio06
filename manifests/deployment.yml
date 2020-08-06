@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: wesleivarjaodesafio 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wesleivarjaodesafio 
+    spec:
+      containers:
+        - name: wesleivarjaodesafio 
+          image: weschap.azurecr.io/wesleivarjaodesafio
+          ports:
+          - containerPort: 5000
