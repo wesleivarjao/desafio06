@@ -1,16 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
+  labels: 
+  app: health
   name: wesleicorinthians 
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels: 
-      app: wesleicorinthians
+      app: health
   template:
     metadata:
       labels:
-        app: wesleicorinthians 
+        app: health 
         
     spec:
       containers:
