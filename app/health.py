@@ -36,6 +36,7 @@ def status_fila():
     else:
         status = "OK"
     return status
+
 #teste Hello World
 @app.route('/')
 print("Vai Corinthians!")
