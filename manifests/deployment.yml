@@ -16,7 +16,7 @@ spec:
       containers:
         - name: wesleicorinthians 
           image: wesleidevops.azurecr.io/wesleicorinthians
-           env:
+          env:
             - name: SQLALCHEMY_DATABASE_URI
               value: "mysql+pymysql://jaine:uis71VCal07@179.188.38.79:3306/jaine"
             - name: REDISTOGO_URL
