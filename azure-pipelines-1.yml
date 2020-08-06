@@ -76,33 +76,3 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-
-- stage: Test
-  displayName: Test Stage
-  dependsOn: Deploy
-  
-  jobs: 
-  - job: Test
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '3.7'
-      
-    - script: pip install requests
-      displayName: Install requests   
-    
-    - task: PythonScript@0
-      inputs:
-        scriptSource: inline
-        script: |
-          import requests
-          import sys
-          res = requests.get('http://40.124.104.53:5000/api').json()
-          if (res.get('Status')) == 200:
-            print('OK - O retorno foi apresentado corretamente')
-          else:
-            print('Rollback sendo efetuado')
-            sys.exit(4)
-        displayName: Test Python
