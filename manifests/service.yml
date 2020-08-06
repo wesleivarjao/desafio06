@@ -1,7 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: wesleivarjaodesafio
+ labels: 
+    app: wesleivarjaodesafio
+ name: wesleivarjaodesafio-services
+ namespace: default
+ 
 spec:
     type: LoadBalancer
     ports:
