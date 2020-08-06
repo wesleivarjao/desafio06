@@ -4,7 +4,7 @@ metadata:
   labels: 
     app: weschapdesafio06
   name: weschapdesafio06-service
-  namespace: desafio06
+  namespace: default
  
 spec:
   ports:
