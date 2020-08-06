@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: weschapdesafio06 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: weschapdesafio06 
+    spec:
+      containers:
+        - name: weschapdesafio06 
+          image: weschap.azurecr.io/weschapdesafio06
+          ports:
+          - containerPort: 5000
