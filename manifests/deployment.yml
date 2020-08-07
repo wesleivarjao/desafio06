@@ -20,5 +20,6 @@ spec:
               value: "mysql+pymysql://jaine:uis71VCal07@179.188.38.79:3306/jaine"
             - name: REDISTOGO_URL
               value: "redis://179.188.38.79:6379"
+              
           ports:
           - containerPort: 5001
