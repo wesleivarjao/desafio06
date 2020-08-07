@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.8.5
 
 MAINTAINER WESLEI VARJAO <weslei.varjao@gmail.com>
 ENV FLASK_APP=health.py
