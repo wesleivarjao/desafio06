@@ -8,5 +8,5 @@ COPY app /app
 COPY entrypoint.sh /usr/bin/entrypoint.sh
 RUN chmod +x /usr/bin/entrypoint.sh
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 5001
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
