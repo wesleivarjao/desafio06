@@ -2,11 +2,12 @@ apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: wesleivarjaodesafio6 
+  
+spec:
+  replicas: 1
   selector:
     matchLabels:
       app: wesleivarjaodesafio6 
-spec:
-  replicas: 1
   template:
     metadata:
       labels:
