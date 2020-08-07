@@ -39,7 +39,8 @@ def status_fila():
 
 #teste Hello World
 @app.route('/')
-print("Vai Corinthians!")
+def hello_world():
+    print("Vai Corinthians!")
 
 #rota, juntamente com o retorno em json
 @app.route('/api')
