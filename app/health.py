@@ -55,10 +55,10 @@ def status():
     }
     message ={
         'API': dict_api,
-        'Status': 200  
+        'Status': 400 
     }
     resp = jsonify(message)
-    resp.status_code = 200
+    resp.status_code = 400
     print(resp)
     return resp
 
