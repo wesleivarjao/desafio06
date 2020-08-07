@@ -1,9 +1,12 @@
-apiVersion : apps/v1beta1
+apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: wesleivarjaodesafio 
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: wesleivarjaodesafio 
   template:
     metadata:
       labels:
@@ -12,5 +15,10 @@ spec:
       containers:
         - name: wesleivarjaodesafio 
           image: desafio06.azurecr.io/wesleivarjaodesafio
+          env:
+            - name: SQLALCHEMY_DATABASE_URI
+              value: "mysql+pymysql://jaine:uis71VCal07@179.188.38.79:3306/jaine"
+            - name: REDISTOGO_URL
+              value: "redis://179.188.38.79:6379"
           ports:
           - containerPort: 5001
