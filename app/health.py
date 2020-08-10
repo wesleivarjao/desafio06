@@ -40,7 +40,7 @@ def status_fila():
 #rota hello world:
 @app.route('/')
 def hello_world():
-    return 'Vai Corinthians! É tetraaaaaa'
+    return 'Vai Corinthians! Nao deu...'
 
 #rota, juntamente com o retorno em json
 @app.route('/api')
