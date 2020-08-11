@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: wesleivarjaodesafio 
-          image: coringao.azurecr.io/wesleivarjaodesafio:103
+          image: coringao.azurecr.io/wesleivarjaodesafio:101
           env:
             - name: SQLALCHEMY_DATABASE_URI
               value: "mysql+pymysql://jaine:uis71VCal07@179.188.38.79:3306/jaine"
